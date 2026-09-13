@@ -11,13 +11,14 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307111f'/%3E%3Cpath d='M16 43 28 15h8l12 28h-8l-2-6H26l-2 6zm13-13h6l-3-9z' fill='%234ce6bd'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="enhancements.css">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
     <a class="brand" href="#top" aria-label="Shalaka Jaitapkar, home"><span>SJ</span></a>
     <nav aria-label="Primary navigation">
-      <a href="#work">Work</a><a href="#framework">Framework</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+      <a href="#work">Work</a><a href="#architecture">Architecture</a><a href="#framework">Framework</a><a href="#credentials">Credentials</a><a href="#contact">Contact</a>
     </nav>
   </header>
 
@@ -29,7 +30,7 @@
         <p class="intro">I’m Shalaka Jaitapkar, a London-based quality engineering leader with 9+ years across banking, payments, financial services, telecom and retail. I design evaluation controls that make AI outputs measurable, traceable and safe to release.</p>
         <div class="actions">
           <a class="button primary" href="https://github.com/jshalaka/testscope-ai-uat-agent" target="_blank" rel="noopener">Explore TestScope <span aria-hidden="true">↗</span></a>
-          <a class="button secondary" href="#contact">Contact me</a>
+          <a class="button secondary" href="downloads/Shalaka_Jaitapkar_Resume.pdf" download>Download résumé ↓</a>
         </div>
       </div>
       <aside class="signal-card reveal" aria-label="Professional snapshot">
@@ -70,6 +71,41 @@
       </div>
     </section>
 
+    <section class="section architecture-section" id="architecture">
+      <div class="section-heading reveal"><p class="eyebrow">ARCHITECTURE BLUEPRINTS</p><h2>Controls designed into the system.</h2><p>These views show how generated outputs move through deterministic checks, human decisions and evidence-producing feedback loops.</p></div>
+      <div class="blueprint-grid">
+        <article class="blueprint reveal">
+          <div class="blueprint-head"><div><p class="label">IMPLEMENTED</p><h3>TestScope controlled generation</h3></div><span>ARCH-01</span></div>
+          <div class="diagram vertical" aria-label="TestScope controlled generation architecture">
+            <div class="node source"><small>INPUT</small><strong>Requirement + acceptance criteria</strong></div>
+            <div class="connector"><span>structured prompt</span></div>
+            <div class="node model"><small>MODEL PLANE</small><strong>Ollama · Qwen3 4B</strong></div>
+            <div class="connector"><span>candidate TestPack</span></div>
+            <div class="node guard"><small>CONTROL PLANE</small><strong>Pydantic schema + deterministic guardrails</strong><em>IDs · coverage · traceability · risk · duplicates</em></div>
+            <div class="connector"><span>validated decision</span></div>
+            <div class="branch-row">
+              <div class="node repair"><small>FAIL</small><strong>One bounded correction</strong></div>
+              <div class="node release"><small>PASS</small><strong>Human review + export</strong></div>
+            </div>
+            <p class="loop-note">Correction output returns to the same validation controls before release.</p>
+          </div>
+        </article>
+        <article class="blueprint reveal">
+          <div class="blueprint-head"><div><p class="label">COMPLETED DESIGN</p><h3>AI evaluation operating loop</h3></div><span>ARCH-02</span></div>
+          <div class="diagram lifecycle" aria-label="AI evaluation lifecycle architecture">
+            <div class="node"><small>1 · GROUND TRUTH</small><strong>Expert golden datasets</strong><em>Versioned cohorts and adversarial cases</em></div>
+            <div class="down-arrow">↓</div>
+            <div class="node"><small>2 · EVALUATION</small><strong>Evaluator stack</strong><em>Rules + calibrated judge + human review</em></div>
+            <div class="down-arrow">↓</div>
+            <div class="node"><small>3 · DECISION</small><strong>Statistical release gate</strong><em>Thresholds · sample size · confidence</em></div>
+            <div class="down-arrow">↓</div>
+            <div class="node"><small>4 · PRODUCTION</small><strong>Sampled traces + drift signals</strong><em>Quality monitored by cohort</em></div>
+            <div class="feedback"><b>↺</b><span>Failures become labelled, permanent regression cases</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <section class="section framework-section" id="framework">
       <div class="section-heading reveal"><p class="eyebrow">COMPLETED DESIGN</p><h2>AI Quality Assurance Framework</h2><p>A lifecycle model for governing AI quality from specification to production evidence. The framework translates responsible-AI principles into engineering controls.</p></div>
       <div class="framework-flow reveal">
@@ -91,9 +127,18 @@
       </div>
     </section>
 
-    <section class="section credentials">
+    <section class="section credentials" id="credentials">
       <div><p class="eyebrow">CREDENTIALS</p><h2>Quality foundations, expanded for AI.</h2></div>
-      <div class="credential-list"><article><span>2026</span><h3>ISTQB Certified Tester – AI Testing</h3><p>CT-AI v1.0</p></article><article><span>2024</span><h3>MSc Artificial Intelligence</h3><p>Brunel University London</p></article><article><span>FOUNDATION</span><h3>ISTQB Certified Tester</h3><p>CTFL</p></article></div>
+      <div class="credential-list"><article><span>2026</span><h3>ISTQB Certified Tester – AI Testing</h3><p>CT-AI v1.0 · <a href="downloads/Shalaka_Jaitapkar_ISTQB_CT-AI_Certificate.pdf" target="_blank">View certificate ↗</a></p></article><article><span>2024</span><h3>MSc Artificial Intelligence</h3><p>Brunel University London</p></article><article><span>FOUNDATION</span><h3>ISTQB Certified Tester</h3><p>CTFL</p></article></div>
+    </section>
+
+    <section class="section document-vault">
+      <div class="section-heading reveal"><p class="eyebrow">DOCUMENTS</p><h2>Detailed evidence, ready to review.</h2><p>Download the concise résumé or open the extended technical portfolio for architecture, project decisions, evaluation strategy and role alignment.</p></div>
+      <div class="document-grid">
+        <a class="document-card reveal" href="downloads/Shalaka_Jaitapkar_Resume.pdf" download><span>PDF · RÉSUMÉ</span><strong>AI Harness & Evaluations Résumé</strong><p>Role-aligned summary of experience, projects, technical skills and credentials.</p><b>Download ↓</b></a>
+        <a class="document-card reveal" href="downloads/Shalaka_Jaitapkar_Technical_Portfolio.pdf" target="_blank"><span>PDF · PORTFOLIO</span><strong>Candidate Technical Portfolio</strong><p>Extended evidence covering TestScope, the AI quality framework and MSc research.</p><b>Open document ↗</b></a>
+        <a class="document-card reveal" href="downloads/Shalaka_Jaitapkar_ISTQB_CT-AI_Certificate.pdf" target="_blank"><span>PDF · CERTIFICATE</span><strong>ISTQB CT-AI Certification</strong><p>Certified Tester – AI Testing credential supporting AI-specific quality practice.</p><b>View certificate ↗</b></a>
+      </div>
     </section>
 
     <section class="section now">
